@@ -30,13 +30,14 @@ def divCal(a, b):
 	return "Division = " + str(a / b)
 
 
-allowedOperations = ["a", "s", "m", "d", "A", "S", "M", "D", "+", "-", "*", "/"]
-while True:
-	operation = input("Enter operation: ")
-	if operation not in allowedOperations:
-		break
-	num1 = float(input("Enter first number: "))
-	num2 = float(input("Enter second number: "))
-	calculator(num1, num2, operation)
+if __name__ == '__main__':
+	allowedOperations = ["a", "s", "m", "d", "A", "S", "M", "D", "+", "-", "*", "/"]
+	while True:
+		operation = input("Enter operation: ")
+		if operation not in allowedOperations:
+			break
+		num1 = float(input("Enter first number: "))
+		num2 = float(input("Enter second number: "))
+		calculator(num1, num2, operation)
 
 print("\nBYE")
