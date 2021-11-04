@@ -9,6 +9,8 @@ def calculator(num1, num2, operation):
 		result = mulCal(num1, num2)
 	elif operation == "/" or operation.lower() == "d":
 		result = divCal(num1, num2)
+	elif operation == "**" or operation.lower() == "p":
+		result = powerCal(num1, num2)
 
 	print(result)
 	print("\n--------------------------------------------\n")
@@ -27,11 +29,15 @@ def mulCal(a, b):
 
 
 def divCal(a, b):
-	return "Division = " + str(a / b)
+	return "Quotient = " + str(a / b) + "\nRemainder = " + str(a % b)
+
+
+def powerCal(a, b):
+	return "Power = " + str(a ** b)
 
 
 if __name__ == '__main__':
-	allowedOperations = ["a", "s", "m", "d", "A", "S", "M", "D", "+", "-", "*", "/"]
+	allowedOperations = ["a", "s", "m", "d", "p", "A", "S", "M", "D", "P", "+", "-", "*", "/", "**"]
 	while True:
 		operation = input("Enter operation: ")
 		if operation not in allowedOperations:
@@ -40,4 +46,4 @@ if __name__ == '__main__':
 		num2 = float(input("Enter second number: "))
 		calculator(num1, num2, operation)
 
-print("\nBYE")
+	print("\nBYE")
