@@ -17,6 +17,7 @@ print(a.count(9))
 a.remove(9)
 a.insert(4, 33)
 print(*a)
+print(a[2:5])
 
 print(a.index(33))
 print(a.index(33, 3, 6))
